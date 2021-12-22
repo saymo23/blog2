@@ -3,7 +3,7 @@ title: Blog? Para que? o Porque no?
 author: Daniel Santarriaga
 date: 2021-12-15
 tags: ["post",'featured']
-image: /assets/blog/article-1.jpg
+image: /assets/blog/blog_1.jpg
 imageAlt: This is a test
 description: Muchas veces he intentado crear un blog y siempre me preguntaba el ¿Porque? o el ¿para que?, luego de un tiempo (y la vejez pisando los talones) me pregunte, ¿Porque no?
 ---
