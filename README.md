@@ -1,1 +1,3 @@
-# JAMStack personal blog - starter files
+# Blog Daniel Santarriaga
+
+Usando el tema de Kevin Powell.
