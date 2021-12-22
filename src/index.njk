@@ -1,0 +1,40 @@
+---
+
+title: Home
+layout: 'base.njk'
+
+---
+
+<main>
+      
+  <section class="hero">
+    <div class="container flow">
+        <div class="hero__content flow">
+          <h1 class="section-title">Welcome to my blog!</h1>
+          <p>Soy Daniel Santarriaga, amante de la informatica en general: Programación, Tecnologia y Videojuegos. </p>
+          <p>Este espacio lo alimentare en escribir poco a poco cosas que me interesan, sin pensarlo tanto, lo que quiero es empezar a escribir más fluido y dejar fluir las ideas que en ocasiones quiero compartir a quien le interese.</p>
+          <div class="flex-group">
+            <a href="#featured-articles" class="btn btn--primary">Artículos interesantes</a>
+            <a href="./blog" class="btn btn--neutral">Artículos Recientes</a>
+          </div>
+        </div>
+        <div class='photo'>
+          <img src="./assets/me.jpg" alt="" class="hero__image">
+        </div>
+    </div>
+  </section>
+
+  <section id="featured-articles" class="featured-articles">
+    <div class="container flow">
+      <h2 class="section-title text-center ">Artículos interesantes</h2>
+      <p class="text-center">Colocare aqui artículos que me parecen más interesantes o a los que más les he dedicado tiempo o investigación.</p>
+      <ul role="list" class="articles__list flow">
+      {% for post in collections.featured | reverse %}
+        {% include "article-list-item.njk" %}
+      {% endfor %}
+      </ul>
+    </div>
+  </section> 
+</main>
+
+
