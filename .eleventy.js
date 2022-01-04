@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets')
 
   eleventyConfig.addFilter("postDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATETIME_MED)
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_HUGE)
   })
 
   return {

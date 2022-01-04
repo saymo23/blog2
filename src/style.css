@@ -234,6 +234,10 @@ header nav{
     margin-bottom: 3rem;
   }
 
+  .main-article video{
+    width: 100%;
+  }
+
   .main-article__figure figcaption {
     margin: 1rem 0;
     font-size: var(--fs-300);
