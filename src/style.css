@@ -193,7 +193,7 @@ header nav{
   display: grid;
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
-  grid-template-columns: 1fr 420px;
+  /* grid-template-columns: 1fr 420px; */
   align-items: center;
   gap: 3em;
 }
@@ -244,6 +244,10 @@ header nav{
     opacity: .9;
   }
 
+  .main-article .container > img{
+    margin: 0 auto;
+  }
+
 /* //////////////////////
   Article snippets
   /////////////////////// */
@@ -251,12 +255,7 @@ header nav{
 .snippet {
   display: grid;
   gap: 1em;
-  grid-template-areas:
-    "image"
-    "title"
-    "meta"
-    "body"
-    "button";
+  
 }
 
 .snippet__image {
@@ -295,20 +294,36 @@ header nav{
 .snippet__title a:focus {
   color: var(--clr-primary-500);
 } 
-
-@media (min-width: 45em) {
-  .snippet {
+.snippet {
+  grid-template-areas:
+    "title image"
+    "meta image"
+    "body image"
+    "button image";
+  grid-column-gap: 4em;
+}
+@media (max-width: 768px){
+  .page-header__content{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  header .flex.logo h1{
+    font-size: 1.5rem;
+  }
+  header .flex.logo{
+    width: 100%;
+  }
+  .snippet{
     grid-template-areas:
-      "title image"
-      "meta image"
-      "body image"
-      "button image";
-    grid-column-gap: 4em;
-    grid-template-columns: 1fr 40%;
-    grid-template-rows: min-content min-content min-content 1fr;
+    "image"
+    "title"
+    "meta"
+    "body"
+    "button";
+    
   }
 }
-
 .btn {
   cursor: pointer;
   text-decoration: none;

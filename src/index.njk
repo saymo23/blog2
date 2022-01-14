@@ -15,10 +15,10 @@ description: Blog Personal
           <h2 class="section-title">Welcome to my blog!</h2>
           <p>Soy Daniel Santarriaga, amante de la informatica en general: Programación, Tecnologia y Videojuegos. </p>
           <p>Este espacio lo alimentare en escribir poco a poco cosas que me interesan, sin pensarlo tanto, lo que quiero es empezar a escribir más fluido y dejar fluir las ideas que en ocasiones quiero compartir a quien le interese.</p>
-          <div class="flex-group">
+          {# <div class="flex-group">
             <a href="#featured-articles" class="btn btn--primary">Artículos interesantes</a>
             <a href="./blog" class="btn btn--neutral">Artículos Recientes</a>
-          </div>
+          </div> #}
         </div>
         {# <div class='photo'>
           <img src="./assets/me.jpg" alt="" class="hero__image">
@@ -28,10 +28,9 @@ description: Blog Personal
 
   <section id="featured-articles" class="featured-articles">
     <div class="container flow">
-      <h2 class="section-title text-center ">Artículos interesantes</h2>
-      <p class="text-center">Colocare aqui artículos que me parecen más interesantes o a los que más les he dedicado tiempo o investigación.</p>
+      <h2 class="section-title text-center ">Blog</h2>
       <ul role="list" class="articles__list flow">
-      {% for post in collections.featured | reverse %}
+      {% for post in collections.post | reverse %}
         {% include "article-list-item.njk" %}
       {% endfor %}
       </ul>
