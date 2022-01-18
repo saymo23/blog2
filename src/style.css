@@ -234,6 +234,14 @@ header nav{
     margin-bottom: 3rem;
   }
 
+  .main-article a{
+    font-weight: bold;
+  }
+
+  .main-article img{
+    margin: 0 auto;
+  }
+
   .main-article video{
     width: 100%;
   }
@@ -255,7 +263,6 @@ header nav{
 .snippet {
   display: grid;
   gap: 1em;
-  
 }
 
 .snippet__image {
